@@ -5,14 +5,14 @@
   overflow: hidden;
 }
 
-.hero-image {
-  width: 100%;
-  height: 100%;
+.carousel-img {
+  width: 50%;
+  height: 50%;
   object-fit: cover;
   z-index: 0;
 }
 
-.navbar-centered {
+.navbar-centrale {
   position: absolute;
   top: 10%;
   left: 50%;
@@ -22,18 +22,28 @@
   width: 90%;
 }
 
-.navbar-centered .navbar-nav .nav-link,
-.navbar-centered .navbar-brand,
-.navbar-centered .nav-item .nav-link {
-  color: white; /* Imposta il colore delle scritte a bianco */
+.navbar-centrale .navbar-nav .nav-link,
+.navbar-centrale .navbar-brand,
+.navbar-centrale .nav-item .nav-link {
+  color: rgb(0, 0, 0); /*colore scritte*/
 }
 /* Stile per le icone social */
-.navbar-centered .bi {
-  font-size: 1.5rem; /* Aumenta la dimensione delle icone */
-  color: white; /* Colore bianco per le icone */
-  margin-left: 10px; /* Aggiungi un po' di spazio tra le icone */
+.navbar-centrale .bi {
+  font-size: 1.5rem;
+  color: white;
+  margin-left: 10px;
 }
 
-.navbar-centered .bi:hover {
-  color: #ddd; /* Colore per l'effetto hover */
+.navbar-centrale .bi:hover {
+  color: #ddd;
+}
+
+.card-info {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.5);
+  width: 90%;
 }
