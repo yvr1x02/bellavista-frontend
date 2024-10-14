@@ -1,5 +1,5 @@
+import React from "react";
 import "./header.css";
-import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -8,9 +8,12 @@ import Image from "react-bootstrap/Image";
 function Header() {
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container>
-          <Navbar.Brand href="#home">BellaVista</Navbar.Brand>
+      <div className="hero-container">
+        <Navbar expand="lg" className="bg-body-tertiary navbar-centered">
+          <Navbar.Brand href="#home">
+            <img alt="" src="/img/logo.svg" width="30" height="30" className="d-inline-block align-top" />
+            Bella Vista
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -24,10 +27,19 @@ function Header() {
                 <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
               </NavDropdown>
             </Nav>
+
+            <Nav>
+              <Nav.Link href="https://www.instagram.com">
+                <i className="bi bi-instagram"></i>
+              </Nav.Link>
+              <Nav.Link href="https://www.facebook.com">
+                <i className="bi bi-facebook"></i>
+              </Nav.Link>
+            </Nav>
           </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <Image src="holder.js/100px250" fluid />;
+        </Navbar>
+        <Image src="src/assets/example.jpg" fluid className="hero-image" />
+      </div>
     </>
   );
 }
