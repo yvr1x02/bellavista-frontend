@@ -2,6 +2,7 @@
   display: block; /* Rende l'immagine un blocco per poterla centrare */
   margin-left: auto; /* Margine a sinistra automatico */
   margin-right: auto; /* Margine a destra automatico */
-  width: 50%; /* Rende l'immagine della larghezza totale del contenitore */
-  height: 20%; /* Mantiene il rapporto d'aspetto */
+  width: 70%; /* Rende l'immagine della larghezza totale del contenitore */
+  height: 20%;
+  max-height: 500px; /* Mantiene il rapporto d'aspetto */
 }

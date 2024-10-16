@@ -14,3 +14,7 @@
 .card-header {
   background: #ffc90649;
 }
+
+.custom-card {
+  border: none;
+}
