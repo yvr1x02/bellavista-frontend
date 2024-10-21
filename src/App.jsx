@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
 import Home from "./components/HomePage/HomePageComponent";
 import AdminDashboard from "./components/AdminSection/AdminDashboard"; // La sezione per l'admin
+import Descrizione from "./components/Descrizione/Descrizione";
 
 function App() {
   const [role, setRole] = useState(null); // Stato per il ruolo
@@ -25,6 +26,7 @@ function App() {
 
         {/* Se vuoi mostrare una pagina di errore agli user che accedono a /admin */}
         {role !== "ADMIN" && <Route path="/admin" element={<p>Accesso negato. Sezione riservata agli admin.</p>} />}
+        <Route path="/descrizione" element={<Descrizione></Descrizione>}></Route>
       </Routes>
     </Router>
   );

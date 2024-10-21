@@ -38,7 +38,7 @@ function Header() {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text className="mx-3">CHI SIAMO /</Navbar.Text>
-          <Nav.Link href="https://www.instagram.com">
+          <Nav.Link href="https://www.instagram.com/bellavista_casa_vacanze?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
             <i className="bi bi-instagram mx-3"></i>
           </Nav.Link>
           <Nav.Link href="https://www.facebook.com">
@@ -63,7 +63,8 @@ function Header() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="/link">About</Nav.Link>
+              <Nav.Link href="/link">Contattaci</Nav.Link>
+              <Nav.Link href="/descrizione">Descrizione</Nav.Link>
               <NavDropdown title="I nostri servizi" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -94,7 +95,7 @@ function Header() {
                   Accedi!
                 </Nav.Link>
               )}
-              <Nav.Link href="https://www.instagram.com">
+              <Nav.Link href="https://www.instagram.com/bellavista_casa_vacanze?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                 <i className="bi bi-instagram"></i>
               </Nav.Link>
               <Nav.Link href="https://www.facebook.com">
