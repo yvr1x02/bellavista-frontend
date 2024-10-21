@@ -79,7 +79,6 @@ function AdminDashboard() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-
       {/* Carosello di immagini */}
       <Carousel>
         <Carousel.Item>
@@ -108,6 +107,7 @@ function AdminDashboard() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      -
     </div>
   );
 }

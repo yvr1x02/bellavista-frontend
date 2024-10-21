@@ -114,11 +114,7 @@ function Header() {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img
-              className="carousel-img d-block w-100"
-              src="src/assets/cd896773-2217-4f47-8b6b-c6ec1674df9e.JPG"
-              alt="Seconda immagine"
-            />
+            <img className="carousel-img d-block w-100" src="src\assets\00-IMG_9226.jpg" alt="Seconda immagine" />
             <Carousel.Caption>
               <h3>Seconda immagine</h3>
               <p>Descrizione della seconda immagine.</p>

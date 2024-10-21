@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Button, Container, Row, Col, Carousel, Alert, Image } from "react-bootstrap";
+import "./login.css";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -77,30 +78,36 @@ function Login() {
   return (
     <>
       <div className="text-center mt-4">
-        <Image src="path_to_your_logo/logo.png" alt="Logo" width="200" />
+        <Image src="src\assets\00-Bellavista logo.jpg" alt="Logo" width="200" className="rounded" />
       </div>
 
-      <Container className="mt-5">
+      <Container className="mt-5 border border-dark rounded p-4">
         <Row className="justify-content-center">
           {/* Colonna sinistra con carosello */}
           <Col xs={12} md={6} className="mb-4">
             <Carousel>
               <Carousel.Item>
-                <img className="d-block w-100" src="https://via.placeholder.com/500x300" alt="Prima immagine" />
+                <img className="login-carousel-img d-block w-100 " src="src\assets\04-Bellavista-9.jpg" alt="Prima immagine" />
                 <Carousel.Caption>
-                  <h3>Prima immagine</h3>
-                  <p>Descrizione della prima immagine.</p>
+                  <h3>Scopri le nostre camere</h3>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="d-block w-100" src="https://via.placeholder.com/500x300" alt="Seconda immagine" />
+                <img
+                  className="login-carousel-img d-block w-100"
+                  src="src/assets/cd896773-2217-4f47-8b6b-c6ec1674df9e.JPG"
+                  alt="Seconda immagine"
+                />
                 <Carousel.Caption>
-                  <h3>Seconda immagine</h3>
-                  <p>Descrizione della seconda immagine.</p>
+                  <h3>Scopri la nostra "Bella Vista"</h3>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
-                <img className="d-block w-100" src="https://via.placeholder.com/500x300" alt="Terza immagine" />
+                <img
+                  className="login-carousel-img d-block w-100"
+                  src="https://via.placeholder.com/500x300"
+                  alt="Terza immagine"
+                />
                 <Carousel.Caption>
                   <h3>Terza immagine</h3>
                   <p>Descrizione della terza immagine.</p>

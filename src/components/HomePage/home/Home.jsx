@@ -1,48 +1,50 @@
-import { Button, Card, Col, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import "./home.css";
 
 const Home = () => {
   return (
     <>
-      <Card className="my-3 p-3 custom-card">
-        <Row className="align-items-center">
-          {/* Colonna immagine a sinistra */}
+      <Container className="p-3">
+        <Row>
           <Col md={4}>
-            <Card.Img src="src\assets\00-Bellavista logo.jpg" className="img-left" />
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src="src\assets\01-Bellavista-01.jpg" />
+              <Card.Body>
+                <Card.Title>Card Title 1</Card.Title>
+                <Card.Text>
+                  "BellaVista casa vacanze" sita in Augusta (Sr) è una villa a 100 metri dal mare interamente ristrutturata nel
+                  2024 ed è organizzata per accogliere fino a 8 persone.
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
           </Col>
-          {/* Colonna descrizione a destra */}
-          <Col md={8}>
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                <span className="strong-text">"BellaVista casa vacanze"</span> sita in{" "}
-                <span className="strong-text">Augusta (Sr)</span> è una villa{" "}
-                <span className="strong-text">a 100 metri dal mare</span> interamente ristrutturata nel 2024 ed è organizzata per
-                accogliere fino a <span className="strong-text">8 persone.</span> <br /> La struttura di 240mq, con meravigliosa{" "}
-                <span className="strong-text">vista sul mare e sul monte Etna</span>, è realizzata su due piani.{" "}
-                <span className="strong-text">Il livello principale</span> è un piano rialzato in cui si trovano un ampio salone,
-                due camere da letto con bagno, sala da pranzo e cucina; sullo stesso livello si trova una veranda esterna con una
-                seconda cucina, barbecue e doccia. <br /> Mediante la scala interna si accede al{" "}
-                <span className="strong-text">piano superiore</span> che dispone di una camera da letto con bagno e un'altra
-                camera da letto con bagno esterno. Sullo stesso piano si trova la zona lavanderia. "BellaVista casa vacanze"{" "}
-                <span>gode di una posizione strategica</span> che vi permetterà di immergervi nella bellezza di colori e sapori
-                tipici di questa parte della Sicilia: si trova{" "}
-                <span className="strong-text">al centro tra Siracusa e Catania</span> (a circa 30 km di distanza entrambe). <br />{" "}
-                Notevoli le città con spiaggia di
-                <span className="strong-text"> Avola, Noto, Fontane Bianche</span>. Vicinissima a{" "}
-                <span className="strong-text">
-                  Cava Grande del Cassibile, Siracusa con la sua splendida Ortigia e il suo Teatro Greco, l'oasi di Vendicari,
-                  Marzamemi. Il Barocco Catanese, i paesi etenei, Taormina{" "}
-                </span>{" "}
-                fanno da cornice alla nostra Sicilia. <br /> Inoltre a circa 700 metri si trova un grande supermercato, due
-                panifici, due farmacie e due bar. Per chi raggiunge la Sicilia in aereo,
-                <span className="strong-text"> l'aeroporto di riferimento è Catania</span>.
-              </Card.Text>
-              <Button className="align-items-centre">Scopri le nostre camere!</Button>
-            </Card.Body>
+          <Col md={4}>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src="src\assets\12-Bellavista-13.jpg" />
+              <Card.Body>
+                <Card.Title>Card Title 2</Card.Title>
+                <Card.Text>
+                  La struttura di 240mq, con meravigliosa vista sul mare e sul monte Etna, è realizzata su due piani.
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={4}>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Body>
+                <Card.Title>Card Title 3</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
           </Col>
         </Row>
-      </Card>
+      </Container>
     </>
   );
 };
