@@ -9,28 +9,28 @@ import { Link } from "react-router-dom";
 
 function Header() {
   const [username, setUsername] = useState(null);
-  const [role, setRole] = useState(null); // Stato per memorizzare il ruolo
+  const [role, setRole] = useState(null);
 
-  // Recupera l'username e il ruolo da localStorage al caricamento della pagina
   useEffect(() => {
     const storedUsername = localStorage.getItem("username");
     const storedRole = localStorage.getItem("role");
     if (storedUsername) {
       setUsername(storedUsername);
-      setRole(storedRole); // Imposta lo stato con il ruolo dell'utente loggato
+      setRole(storedRole);
     }
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem("username"); // Rimuove il nome utente da localStorage
-    localStorage.removeItem("role"); // Rimuove il ruolo
-    setUsername(null); // Aggiorna lo stato per nascondere l'username e mostrare "Accedi"
-    setRole(null); // Resetta anche il ruolo
+    localStorage.removeItem("username");
+    localStorage.removeItem("role");
+    setUsername(null);
+    setRole(null);
   };
 
   return (
     <>
-      <Navbar className="mx-3" expand="lg">
+      {/* Navbar superiore */}
+      <Navbar className="mx-3 sticky-top w-100 bg-light" expand="lg">
         <Button variant="primary" className="mx-3">
           Richiedi preventivo
         </Button>
@@ -47,11 +47,12 @@ function Header() {
         </Navbar.Collapse>
       </Navbar>
 
+      {/* Navbar principale */}
       <div className="hero-container">
-        <Navbar expand="lg" className="navbar-centrale rounded">
+        <Navbar expand="lg" className="navbar-centrale sticky-top w-100 bg-light rounded">
           <Navbar.Brand href="#home">
             <img
-              alt=""
+              alt="Logo Bellavista"
               src="src/assets/00-Bellavista logo.jpg"
               width="140"
               height="80"
@@ -115,7 +116,7 @@ function Header() {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="carousel-img d-block w-100" src="src\assets\00-IMG_9226.jpg" alt="Seconda immagine" />
+            <img className="carousel-img d-block w-100" src="src/assets/00-IMG_9226.jpg" alt="Seconda immagine" />
             <Carousel.Caption>
               <h3>Seconda immagine</h3>
               <p>Descrizione della seconda immagine.</p>
