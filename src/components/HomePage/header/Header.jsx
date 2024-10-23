@@ -30,7 +30,7 @@ function Header() {
   return (
     <>
       {/* Navbar superiore */}
-      <Navbar className="mx-3 sticky-top w-100 bg-light" expand="lg">
+      <Navbar className=" w-100 bg-light" expand="lg">
         <Button variant="primary" className="mx-3">
           Richiedi preventivo
         </Button>
@@ -49,10 +49,10 @@ function Header() {
 
       {/* Navbar principale */}
       <div className="hero-container">
-        <Navbar expand="lg" className="navbar-centrale sticky-top w-100 bg-light rounded">
+        <Navbar expand="lg" className="navbar-centrale rounded">
           <Navbar.Brand href="#home">
             <img
-              alt="Logo Bellavista"
+              alt=""
               src="src/assets/00-Bellavista logo.jpg"
               width="140"
               height="80"
@@ -64,8 +64,7 @@ function Header() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="/link">Contattaci</Nav.Link>
-              <Nav.Link href="/descrizione">Descrizione</Nav.Link>
+              <Nav.Link href="/link">About</Nav.Link>
               <NavDropdown title="I nostri servizi" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -86,8 +85,8 @@ function Header() {
               {/* Se l'utente è loggato, mostra l'username e un pulsante di logout, altrimenti mostra il link per il login */}
               {username ? (
                 <>
-                  <Navbar.Text>Benvenuto, {username}</Navbar.Text>
-                  <Nav.Link as={Link} to="/" onClick={handleLogout}>
+                  <Navbar.Text className="welcome-navbar">Benvenuto, {username}</Navbar.Text>
+                  <Nav.Link as={Link} to="/" onClick={handleLogout} className="logout">
                     Logout
                   </Nav.Link>
                 </>
@@ -96,7 +95,7 @@ function Header() {
                   Accedi!
                 </Nav.Link>
               )}
-              <Nav.Link href="https://www.instagram.com/bellavista_casa_vacanze?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+              <Nav.Link href="https://www.instagram.com">
                 <i className="bi bi-instagram"></i>
               </Nav.Link>
               <Nav.Link href="https://www.facebook.com">
@@ -107,7 +106,7 @@ function Header() {
         </Navbar>
 
         {/* Carosello di immagini */}
-        <Carousel>
+        <Carousel className="p-1">
           <Carousel.Item>
             <img className="carousel-img d-block w-100" src="src/assets/04-Bellavista-9.jpg" alt="Prima immagine" />
             <Carousel.Caption>

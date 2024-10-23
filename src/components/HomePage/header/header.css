@@ -3,6 +3,7 @@
   width: 100%;
   height: 85vh;
   overflow: hidden;
+  background: #001e5c;
 }
 
 .carousel-img {
@@ -19,14 +20,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  background: rgba(255, 255, 255, 0.5);
+  background: #001e5c;
   width: 90%;
 }
 
 .navbar-centrale .navbar-nav .nav-link,
 .navbar-centrale .navbar-brand,
 .navbar-centrale .nav-item .nav-link {
-  color: rgb(0, 0, 0); /*colore scritte*/
+  color: #ffcc01; /*colore scritte*/
 }
 /* Stile per le icone social */
 .navbar-centrale .bi {
@@ -47,4 +48,12 @@
   z-index: 1;
   background: rgba(255, 255, 255, 0.5);
   width: 90%;
+}
+
+.welcome-navbar {
+  color: #ffcc01;
+}
+
+.logout {
+  color: red;
 }
