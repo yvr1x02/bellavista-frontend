@@ -4,8 +4,8 @@ import "./about.css";
 const About = () => {
   return (
     <>
-      <Card>
-        <Card.Img variant="top" src="src\assets\27-Bellavista-75.jpg" className="bellavista-img rounded p-5" />
+      <Card className="border border-none">
+        <Card.Img variant="top" src="src\assets\27-Bellavista-75.jpg" className="bellavista-img rounded p-5 " />
       </Card>
 
       <div className="p-4 mx-3">

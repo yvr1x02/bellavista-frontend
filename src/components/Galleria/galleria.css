@@ -1,0 +1,52 @@
+/* Galleria.css */
+
+/* Stile per la galleria */
+.galleria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Stile per ogni immagine */
+.galleria-img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Ingrandimento all'hover */
+.galleria-img:hover {
+  transform: scale(1.2);
+}
+
+/* Stile per l'overlay */
+.galleria-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* Stile per l'immagine in primo piano */
+.galleria-img-primo-piano {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}

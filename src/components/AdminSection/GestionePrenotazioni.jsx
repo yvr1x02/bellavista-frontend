@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
+import Button from "react-bootstrap/Button";
+import "./admin.css";
 
 function GestionePrenotazioni() {
   const [prenotazioni, setPrenotazioni] = useState([]);
 
+  // Recupera le prenotazioni dal backend
   useEffect(() => {
-    // Recupera le prenotazioni dal backend
+    fetchPrenotazioni();
+  }, []);
+
+  const fetchPrenotazioni = () => {
     fetch("http://localhost:3001/api/prenotazioni", {
       method: "GET",
       headers: {
@@ -15,11 +21,38 @@ function GestionePrenotazioni() {
       .then((response) => response.json())
       .then((data) => setPrenotazioni(data))
       .catch((error) => console.error("Errore nel recupero delle prenotazioni:", error));
-  }, []);
+  };
+
+  // Funzione per confermare la prenotazione
+  const handleConfermaPrenotazione = (id) => {
+    fetch(`http://localhost:3001/api/prenotazioni/${id}/conferma`, {
+      method: "PUT", // Usa PUT per aggiornare
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ confermata: true }), // Imposta confermata su true
+    })
+      .then((response) => response.json())
+      .then(() => {
+        fetchPrenotazioni(); // Aggiorna la lista delle prenotazioni dopo l'aggiornamento
+      })
+      .catch((error) => console.error("Errore durante la conferma della prenotazione:", error));
+  };
+
+  // Funzione per eliminare la prenotazione
+  const handleEliminaPrenotazione = (id) => {
+    fetch(`http://localhost:3001/api/prenotazioni/${id}`, {
+      method: "DELETE",
+    })
+      .then(() => {
+        fetchPrenotazioni(); // Aggiorna la lista delle prenotazioni dopo l'eliminazione
+      })
+      .catch((error) => console.error("Errore durante l'eliminazione della prenotazione:", error));
+  };
 
   return (
-    <div>
-      <h2>Gestione Prenotazioni</h2>
+    <div className="gestione-prenotazioni mx-5">
+      <h2 className="gestione-prenotazioni">Prenotazioni</h2>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -28,6 +61,7 @@ function GestionePrenotazioni() {
             <th>Data Inizio</th>
             <th>Data Fine</th>
             <th>Confermata</th>
+            <th>Azioni</th>
           </tr>
         </thead>
         <tbody>
@@ -40,6 +74,18 @@ function GestionePrenotazioni() {
               <td>{prenotazione.dataInizio}</td>
               <td>{prenotazione.dataFine}</td>
               <td>{prenotazione.confermata ? "Sì" : "No"}</td>
+              <td>
+                {/* Pulsante per confermare la prenotazione */}
+                {!prenotazione.confermata && (
+                  <Button variant="success" onClick={() => handleConfermaPrenotazione(prenotazione.id)}>
+                    Conferma
+                  </Button>
+                )}
+                {/* Pulsante per eliminare la prenotazione */}
+                <Button variant="danger" onClick={() => handleEliminaPrenotazione(prenotazione.id)} className="ms-2">
+                  Elimina
+                </Button>
+              </td>
             </tr>
           ))}
         </tbody>

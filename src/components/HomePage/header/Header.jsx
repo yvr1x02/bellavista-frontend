@@ -48,7 +48,7 @@ function Header() {
       </Navbar>
 
       {/* Navbar principale */}
-      <div className="hero-container">
+      <div className="hero-container p-1">
         <Navbar expand="lg" className="navbar-centrale rounded">
           <Navbar.Brand href="#home">
             <img
@@ -64,14 +64,8 @@ function Header() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/home">Home</Nav.Link>
-              <Nav.Link href="/link">About</Nav.Link>
-              <NavDropdown title="I nostri servizi" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link href="/descrizione">Descrizione</Nav.Link>
+              <Nav.Link href="/galleria">La nostra struttura</Nav.Link>
 
               {/* Se l'utente ha il ruolo di admin, mostra la sezione Gestione */}
               {role === "ADMIN" && (

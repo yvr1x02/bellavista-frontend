@@ -4,6 +4,7 @@ import Login from "./components/Login/Login";
 import Home from "./components/HomePage/HomePageComponent";
 import AdminDashboard from "./components/AdminSection/AdminDashboard"; // La sezione per l'admin
 import Descrizione from "./components/Descrizione/Descrizione";
+import Galleria from "./components/Galleria/Galleria";
 
 function App() {
   const [role, setRole] = useState(null); // Stato per il ruolo
@@ -27,6 +28,7 @@ function App() {
         {/* Se vuoi mostrare una pagina di errore agli user che accedono a /admin */}
         {role !== "ADMIN" && <Route path="/admin" element={<p>Accesso negato. Sezione riservata agli admin.</p>} />}
         <Route path="/descrizione" element={<Descrizione></Descrizione>}></Route>
+        <Route path="/galleria" element={<Galleria></Galleria>}></Route>
       </Routes>
     </Router>
   );
