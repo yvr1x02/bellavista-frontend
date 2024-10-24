@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./header.css";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Carousel from "react-bootstrap/Carousel";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -29,33 +28,15 @@ function Header() {
 
   return (
     <>
-      {/* Navbar superiore */}
-      <Navbar className=" w-100 bg-light" expand="lg">
-        <Button variant="primary" className="mx-3">
-          Richiedi preventivo
-        </Button>
-        <Navbar.Text className="mx-3">TEL 0931999734 / WHATSAPP 3342532043 / BELLAVISTA@INFO.IT</Navbar.Text>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text className="mx-3">CHI SIAMO /</Navbar.Text>
-          <Nav.Link href="https://www.instagram.com/bellavista_casa_vacanze?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-            <i className="bi bi-instagram mx-3"></i>
-          </Nav.Link>
-          <Nav.Link href="https://www.facebook.com">
-            <i className="bi bi-facebook"></i>
-          </Nav.Link>
-        </Navbar.Collapse>
-      </Navbar>
-
       {/* Navbar principale */}
       <div className="hero-container p-1">
-        <Navbar expand="lg" className="navbar-centrale rounded">
+        <Navbar expand="lg" className="navbar-centrale rounded sticky">
           <Navbar.Brand href="#home">
             <img
               alt=""
               src="src/assets/00-Bellavista logo.jpg"
-              width="140"
-              height="80"
+              width="160"
+              height="100"
               className="d-inline-block align-centre mx-3 rounded"
             />
             Bella Vista
@@ -100,7 +81,7 @@ function Header() {
         </Navbar>
 
         {/* Carosello di immagini */}
-        <Carousel className="p-1">
+        <Carousel className=" carousel p-1 ">
           <Carousel.Item>
             <img className="carousel-img d-block w-100" src="src/assets/04-Bellavista-9.jpg" alt="Prima immagine" />
             <Carousel.Caption>

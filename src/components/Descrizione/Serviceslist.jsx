@@ -1,31 +1,39 @@
-import ListGroup from "react-bootstrap/ListGroup";
+import React from "react";
 import "./serviceList.css";
 
 function ServicesList() {
+  const services = [
+    "Aria condizionata",
+    "Internet LAN - WI-FI",
+    "TV",
+    "Cucina interna",
+    "Cucina esterna",
+    "Lavastoviglie",
+    "Forno",
+    "Bollitore",
+    "Frigo e freezer",
+    "Macchina del caffè",
+    "Asciugacapelli",
+    "Asse da stiro e ferro da stiro",
+    "Kit cucito",
+    "Barbecue",
+    "Zanzariere",
+    "Kit pronto soccorso",
+    "Estintore",
+    "Rilevatore di fumo e monossido di carbonio",
+    "Parcheggio",
+    "Tavolo da Ping Pong",
+    "Accesso privato al mare",
+  ];
+
   return (
-    <ListGroup className="border border-none">
-      <ListGroup.Item className="list">Aria condizionata</ListGroup.Item>
-      <ListGroup.Item className="list">Internet LAN - WI-FI</ListGroup.Item>
-      <ListGroup.Item className="list">TV</ListGroup.Item>
-      <ListGroup.Item className="list">Cucina interna</ListGroup.Item>
-      <ListGroup.Item className="list">Cucina esterna</ListGroup.Item>
-      <ListGroup.Item className="list">Lavastoviglie</ListGroup.Item>
-      <ListGroup.Item className="list">Forno</ListGroup.Item>
-      <ListGroup.Item className="list">Bollitore</ListGroup.Item>
-      <ListGroup.Item className="list">Frigo e freezer</ListGroup.Item>
-      <ListGroup.Item className="list">Macchina del caffè</ListGroup.Item>
-      <ListGroup.Item className="list">Asciugacapelli</ListGroup.Item>
-      <ListGroup.Item className="list">Asse da stiro e ferro da stiro</ListGroup.Item>
-      <ListGroup.Item className="list">Kit cucito</ListGroup.Item>
-      <ListGroup.Item className="list">Barbecue</ListGroup.Item>
-      <ListGroup.Item className="list">Zanzariere</ListGroup.Item>
-      <ListGroup.Item className="list">Kit pronto soccorso</ListGroup.Item>
-      <ListGroup.Item className="list">Estintore</ListGroup.Item>
-      <ListGroup.Item className="list">Rilevatore di fumo e monossido di carbonio</ListGroup.Item>
-      <ListGroup.Item className="list">Parcheggio</ListGroup.Item>
-      <ListGroup.Item className="list">Tavolo da Ping Pong</ListGroup.Item>
-      <ListGroup.Item className="list">Accesso privato al mare</ListGroup.Item>
-    </ListGroup>
+    <div className="services-container">
+      {services.map((service, index) => (
+        <div key={index} className="service-item">
+          {service}
+        </div>
+      ))}
+    </div>
   );
 }
 

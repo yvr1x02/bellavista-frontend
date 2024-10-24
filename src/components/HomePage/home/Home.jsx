@@ -10,12 +10,11 @@ const Home = () => {
             <Card style={{ width: "18rem" }}>
               <Card.Img variant="top" src="src\assets\01-Bellavista-01.jpg" />
               <Card.Body>
-                <Card.Title>Card Title 1</Card.Title>
+                <Card.Title></Card.Title>
                 <Card.Text>
                   "BellaVista casa vacanze" sita in Augusta (Sr) è una villa a 100 metri dal mare interamente ristrutturata nel
-                  2024 ed è organizzata per accogliere fino a 8 persone.
+                  2024 .
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -23,23 +22,22 @@ const Home = () => {
             <Card style={{ width: "18rem" }}>
               <Card.Img variant="top" src="src\assets\12-Bellavista-13.jpg" />
               <Card.Body>
-                <Card.Title>Card Title 2</Card.Title>
+                <Card.Title></Card.Title>
                 <Card.Text>
                   La struttura di 240mq, con meravigliosa vista sul mare e sul monte Etna, è realizzata su due piani.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
             <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Img variant="top" src="src\Galleria-img\cd896773-2217-4f47-8b6b-c6ec1674df9e.JPG" />
               <Card.Body>
-                <Card.Title>Card Title 3</Card.Title>
+                <Card.Title></Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  "BellaVista casa vacanze" gode di una posizione strategica che vi permetterà di immergervi nella bellezza di
+                  colori e sapori tipici di questa parte della Sicilia.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
               </Card.Body>
             </Card>
           </Col>

@@ -1,3 +1,25 @@
-.list {
-  background: #c2f1ff;
+/* Contenitore per tutti i servizi */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Spaziatura tra gli elementi */
+}
+
+/* Stile per ogni singolo servizio */
+.service-item {
+  background-color: #f8f9fa; /* Colore di sfondo */
+  border: 2px solid #007bff; /* Bordi di colore blu */
+  border-radius: 50px; /* Crea l'effetto "pill" */
+  padding: 10px 20px; /* Spaziatura interna */
+  color: #007bff; /* Colore del testo */
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Aggiungi un effetto hover */
+.service-item:hover {
+  background-color: #007bff; /* Cambia sfondo al passaggio del mouse */
+  color: white; /* Colore del testo su hover */
+  cursor: pointer; /* Mostra il cursore a mano */
 }

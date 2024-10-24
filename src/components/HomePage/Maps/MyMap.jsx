@@ -25,19 +25,19 @@ function MyMapPage() {
         <Col md={6}>
           <Card className="mb-3">
             <Card.Body>
-              <Card.Title>Informazioni Generali</Card.Title>
+              <Card.Title>Contattaci</Card.Title>
               <Card.Text>
                 Questa è una casa vacanze situata in una bellissima posizione vicino al mare. Perfetta per una fuga estiva o un
                 soggiorno rilassante.
               </Card.Text>
               <Card.Text>
-                <strong>Indirizzo:</strong> Via del Mare 10, 00100 Bellavista
+                <strong>Indirizzo:</strong> Via Grazia Deledda, 5, Augusta, Italia
               </Card.Text>
               <Card.Text>
-                <strong>Telefono:</strong> +39 0931 999734
+                <strong>Telefono:</strong> +393332613191
               </Card.Text>
               <Card.Text>
-                <strong>Email:</strong> info@bellavista.it
+                <strong>Email:</strong> roomsbellavista@gmail.com
               </Card.Text>
             </Card.Body>
           </Card>
