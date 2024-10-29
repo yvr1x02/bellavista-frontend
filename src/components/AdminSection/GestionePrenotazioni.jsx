@@ -23,14 +23,13 @@ function GestionePrenotazioni() {
       .catch((error) => console.error("Errore nel recupero delle prenotazioni:", error));
   };
 
-  // Funzione per confermare la prenotazione
   const handleConfermaPrenotazione = (id) => {
     fetch(`http://localhost:3001/api/prenotazioni/${id}/conferma`, {
-      method: "PUT", // Usa PUT per aggiornare
+      method: "PUT", //aggiornamento prenotazione
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ confermata: true }), // Imposta confermata su true
+      body: JSON.stringify({ confermata: true }),
     })
       .then((response) => response.json())
       .then(() => {

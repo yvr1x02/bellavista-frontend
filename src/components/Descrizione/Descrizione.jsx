@@ -6,6 +6,7 @@ import ServicesList from "./Serviceslist";
 import Servizi from "./Servizi";
 import Header from "../HomePage/header/Header";
 
+//Funzione pagina Descrizione
 function Descrizione() {
   return (
     <>

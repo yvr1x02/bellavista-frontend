@@ -5,7 +5,6 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import Weather from "./Weather";
 
-// URL pubblico dell'icona standard di Leaflet
 const customIcon = new L.Icon({
   iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
   iconSize: [25, 41],
@@ -21,7 +20,7 @@ function MyMapPage() {
     <Container>
       {/* Layout a due colonne */}
       <Row>
-        {/* Colonna sinistra - informazioni generali */}
+        {/* Colonna sinistra - meteo */}
         <Col md={6}>
           <Weather></Weather>
         </Col>
