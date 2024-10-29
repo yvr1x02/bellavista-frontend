@@ -1,0 +1,104 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  max-height: 1000px;
+  overflow: hidden;
+  background: #001e5c;
+  z-index: 0;
+}
+
+.carousel-img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  max-height: 800px;
+}
+
+.navbar-centrale {
+  position: sticky;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: #001e5c;
+  width: 100%;
+}
+
+.navbar-centrale .navbar-nav .nav-link,
+.navbar-centrale .navbar-brand,
+.navbar-centrale .nav-item .nav-link {
+  color: #ffcc01; /*colore scritte*/
+}
+/* Stile per le icone social */
+.navbar-centrale .bi {
+  font-size: 1.5rem;
+  color: white;
+  margin-left: 10px;
+}
+
+.navbar-centrale .bi:hover {
+  color: #ddd;
+}
+
+.card-info {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.5);
+  width: 90%;
+}
+
+.welcome-navbar {
+  color: #ffcc01;
+}
+
+.logout {
+  color: red;
+}
+
+.navbar-centrale .nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #ffcc01;
+  padding: 0.5rem;
+  transition: color 0.7s ease;
+  display: inline-block;
+}
+
+.navbar-centrale .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffcc01;
+  visibility: hidden;
+  transition: all 0.7s ease-in-out;
+}
+
+.navbar-centrale .nav-link:hover::after {
+  visibility: visible;
+  width: 100%;
+}
+
+.navbar-centrale .nav-link:hover {
+  color: #ffcc01;
+}
+
+.navbar-centrale {
+  position: sticky; /* Fissa la navbar quando si scorre */
+  top: 0; /* Si attacca al top della pagina */
+  z-index: 1000; /* Mantiene la navbar in cima sopra il contenuto */
+  background: #001e5c;
+  width: 100%; /* La navbar copre tutta la larghezza */
+  transform: none; /* Rimuove eventuali trasformazioni */
+  left: 0; /* Imposta la posizione a sinistra */
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}

@@ -26,7 +26,7 @@ function Login() {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("username", data.username);
-        localStorage.setItem("role", data.role); // Assicurati che il backend invii il ruolo dell'utente
+        localStorage.setItem("role", data.role);
 
         setSuccessMessage("Login effettuato con successo!");
         setError(null);
@@ -99,18 +99,17 @@ function Login() {
                   alt="Seconda immagine"
                 />
                 <Carousel.Caption>
-                  <h3>Scopri la nostra "Bella Vista"</h3>
+                  <h3>Scopri la nostra Bella Vista</h3>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="login-carousel-img d-block w-100"
-                  src="https://via.placeholder.com/500x300"
+                  src="src\Galleria-img\95607b4e4456e57897a343177a589192 (1).jpg"
                   alt="Terza immagine"
                 />
                 <Carousel.Caption>
-                  <h3>Terza immagine</h3>
-                  <p>Descrizione della terza immagine.</p>
+                  <h3>Scopri luoghi meravigliosi in Sicilia</h3>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>

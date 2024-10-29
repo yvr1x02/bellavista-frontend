@@ -58,8 +58,11 @@ function GestionePrenotazioni() {
           <tr>
             <th>ID</th>
             <th>Ospite</th>
+            <th>Email</th>
+            <th>Telefono</th>
             <th>Data Inizio</th>
             <th>Data Fine</th>
+            <th>Note</th>
             <th>Confermata</th>
             <th>Azioni</th>
           </tr>
@@ -71,8 +74,12 @@ function GestionePrenotazioni() {
               <td>
                 {prenotazione.ospite.nome} {prenotazione.ospite.cognome}
               </td>
+              <td>{prenotazione.ospite.email}</td>
+              <td>{prenotazione.ospite.telefono}</td>
               <td>{prenotazione.dataInizio}</td>
               <td>{prenotazione.dataFine}</td>
+              <td>{prenotazione.note}</td>
+
               <td>{prenotazione.confermata ? "Sì" : "No"}</td>
               <td>
                 {/* Pulsante per confermare la prenotazione */}

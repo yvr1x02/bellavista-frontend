@@ -4,11 +4,14 @@ import Home from "./home/Home";
 import About from "./about/About";
 import MyMap from "./Maps/MyMap";
 import Prenotazioni from "../Prenotazioni/Prenotazioni";
+import { Carousel } from "react-bootstrap";
+import CompleteHeader from "./CompleteHeader/CompleteHeader";
 
 const MainComponent = () => {
   return (
     <>
-      <Header />
+      <CompleteHeader></CompleteHeader>
+      <Carousel></Carousel>
       <Home />
       <About />
       <MyMap />

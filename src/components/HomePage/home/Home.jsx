@@ -1,6 +1,5 @@
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import "./home.css";
-
 const Home = () => {
   return (
     <>
@@ -13,7 +12,7 @@ const Home = () => {
                 <Card.Title></Card.Title>
                 <Card.Text>
                   "BellaVista casa vacanze" sita in Augusta (Sr) è una villa a 100 metri dal mare interamente ristrutturata nel
-                  2024 .
+                  2024.
                 </Card.Text>
               </Card.Body>
             </Card>

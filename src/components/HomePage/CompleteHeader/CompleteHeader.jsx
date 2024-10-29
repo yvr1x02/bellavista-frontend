@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./header.css";
+import "../header/header.css";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Carousel from "react-bootstrap/Carousel";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Header() {
+function CompleteHeader() {
   const [username, setUsername] = useState(null);
   const [role, setRole] = useState(null);
 
@@ -81,9 +81,32 @@ function Header() {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
+
+        {/* Carosello di immagini */}
+        <Carousel className=" carousel p-1 ">
+          <Carousel.Item>
+            <img className="carousel-img d-block w-100" src="src/assets/04-Bellavista-9.jpg" alt="Prima immagine" />
+            <Carousel.Caption>
+              <h1>Scopri le nostre camere</h1>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="carousel-img d-block w-100" src="src/assets/00-IMG_9226.jpg" alt="Seconda immagine" />
+            <Carousel.Caption>
+              <h1>Scopri la nostra Bella Vista.</h1>
+              <p></p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="carousel-img d-block w-100" src="src/assets/15-Bellavista-40.jpg" alt="Terza immagine" />
+            <Carousel.Caption>
+              <h1>Scopri luoghi meravigliosi in Sicilia</h1>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
       </div>
     </>
   );
 }
 
-export default Header;
+export default CompleteHeader;

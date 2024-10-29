@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Form, Button, ListGroup, Card, Dropdown } from "react-bootstrap";
+import { Form, Button, ListGroup, Card, Dropdown, Alert } from "react-bootstrap";
 
 function Prenotazioni() {
   const [prenotazioni, setPrenotazioni] = useState([]);
@@ -12,6 +12,8 @@ function Prenotazioni() {
   const [dataInizio, setDataInizio] = useState("");
   const [dataFine, setDataFine] = useState("");
   const [note, setNote] = useState("");
+  const [alertMessage, setAlertMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(null);
 
   // Effettua una chiamata API per ottenere tutte le prenotazioni e gli ospiti all'inizio
   useEffect(() => {
@@ -40,7 +42,7 @@ function Prenotazioni() {
 
     const newPrenotazione = {
       ospite: {
-        id: ospiteSelezionato, // Passa l'oggetto ospite con l'ID selezionato
+        id: ospiteSelezionato,
       },
       dataInizio,
       dataFine,
@@ -56,15 +58,18 @@ function Prenotazioni() {
     })
       .then((response) => response.json())
       .then((data) => {
-        setPrenotazioni([...prenotazioni, data]);
+        setPrenotazioni((prevPrenotazioni) => [...prevPrenotazioni, data]);
         setDataInizio("");
         setDataFine("");
         setNote("");
+        setIsSuccess(true);
+        setAlertMessage("Prenotazione creata con successo!");
       })
       .catch((error) => console.error("Errore durante la creazione della prenotazione:", error));
+    setIsSuccess(false);
+    setAlertMessage("Errore nella creazione della prenotazione");
   };
 
-  // Gestisce l'invio del form per creare un nuovo ospite
   const handleSubmitOspite = (e) => {
     e.preventDefault();
 
@@ -84,9 +89,9 @@ function Prenotazioni() {
     })
       .then((response) => response.json())
       .then((data) => {
-        setOspiti([...ospiti, data]); // Aggiunge il nuovo ospite alla lista degli ospiti
-        setOspiteSelezionato(data.id); // Imposta l'ospite appena creato come selezionato
-        console.log("Ospite creato:", data); // Verifica che l'ID sia presente nella risposta
+        setOspiti([...ospiti, data]);
+        setOspiteSelezionato(data.id);
+        console.log("Ospite creato:", data);
         setNuovoOspiteNome("");
         setNuovoOspiteCognome("");
         setNuovoOspiteEmail("");
@@ -98,7 +103,6 @@ function Prenotazioni() {
   return (
     <div className="container mt-5">
       <h2>Gestione Prenotazioni</h2>
-
       {/* Sezione per selezionare o creare un nuovo ospite */}
       <Card className="mb-4">
         <Card.Body>
@@ -119,7 +123,7 @@ function Prenotazioni() {
 
           <hr />
 
-          <h4>Oppure crea un nuovo Ospite</h4>
+          <h4>Nuovo Ospite</h4>
           <Form onSubmit={handleSubmitOspite}>
             <Form.Group className="mb-3">
               <Form.Label>Nome</Form.Label>
@@ -194,6 +198,12 @@ function Prenotazioni() {
           </Form>
         </Card.Body>
       </Card>
+
+      {alertMessage && (
+        <Alert variant={isSuccess ? "success" : "danger"} onClose={() => setAlertMessage("")} dismissible>
+          {alertMessage}
+        </Alert>
+      )}
     </div>
   );
 }
